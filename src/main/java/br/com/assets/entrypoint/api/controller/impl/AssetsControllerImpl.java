@@ -5,10 +5,8 @@ import br.com.assets.entrypoint.api.controller.AssetsController;
 import br.com.assets.entrypoint.api.dto.output.AssetsOutputDTO;
 import br.com.assets.entrypoint.facade.AssetsUpsertFacade;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RestController;
 
-@Slf4j
 @RestController
 @RequiredArgsConstructor
 public class AssetsControllerImpl implements AssetsController {

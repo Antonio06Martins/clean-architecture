@@ -1,8 +1,40 @@
 server:
   port: 8080
 
+#antswagger:
+#  info:
+#    build:
+#      artifact: "@project.artifactId@"
+#      name: "@project.name@"
+#      description: "@project.description"
+#      version: "@project.version@"
+#      apiName: "Estudo Clean Architecture"
+#  swagger:
+#    title: Clean Architecture
+#    descr: Estudo Clean Architecture
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health, swagger
+      base-path: '/actuator'
+
+#springdoc:
+#  api-docs:
+#    path: /api-docs
+#  swagger-ui:
+#    path: /swagger-ui-custom.html
+
 spring:
   data:
     mongodb:
       uri: mongodb://clean:cleanpassword@localhost:27017
       database: boot-mongodb
+
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm.ss.SSS} %X{X-Request-ID} %highlight(%-5level) %magenta([%t]) %msg%n"

@@ -1,6 +1,5 @@
 package br.com.assets.entrypoint.api.dto.output;
 
-import br.com.assets.core.domain.CarDomain;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;
 

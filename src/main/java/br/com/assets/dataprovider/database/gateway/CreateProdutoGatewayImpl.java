@@ -17,9 +17,11 @@ public class CreateProdutoGatewayImpl implements CreateProdutoGateway {
 
     @Override
     public ProdutoDomain create(final String id, final ProdutoDomain produtoDomain) {
+
         final var produtoEntity = produtoMapper.toEntity(produtoDomain);
         final var produtoInDatabase = produtoRepository.save(produtoEntity);
         final var produtoDomainInDatabase = produtoMapper.toDomain(produtoInDatabase);
+
         return produtoDomainInDatabase;
     }
 }

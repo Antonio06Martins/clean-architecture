@@ -16,22 +16,16 @@ public class AssetsUpsertFacade {
 
     public AssetsOutputDTO upsert(final String id, final String identifyId, AssetsDomain input) {
         log.info("Chamou Facade 1 [{}]", id);
-        log.info("Chamou Facade 1 [{}]", identifyId);
-        log.info("Chamou Facade 1 [{}]", input.getCarDomain().getModel());
         final var assetsDomain = upsertAssetsDomain(id, identifyId, input);
         return buildAssetsOutputDto(assetsDomain);
     }
 
     private AssetsDomain upsertAssetsDomain(final String id, final String identifyId, AssetsDomain input) {
         log.info("Chamou Facade 2 [{}]", id);
-        log.info("Chamou Facade 2 [{}]", identifyId);
-        log.info("Chamou Facade 2 [{}]", input.getCarDomain().getModel());
         return assetsUpsertUseCase.upsert(id, identifyId, input);
     }
 
     private AssetsOutputDTO buildAssetsOutputDto(final AssetsDomain input) {
-        log.info("Chamou Facade 3 [{}]", input.getId());
-
         return AssetsOutputDTO.builder()
                 .identifyId(input.getIdentifyId())
                 .createdData(input.getCreatedData())

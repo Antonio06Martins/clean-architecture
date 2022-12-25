@@ -25,7 +25,6 @@ public class ProdutoUpsertUseCase {
 
         final var produtoInDatabase = searchProdutoInDatabase(id);
         log.info("chamou UseCase 1 [{}]", id);
-        log.info("chamou UseCase 1 [{}]", produtoDomain.getIdadeDomain().getIdade());
 
         if(isNull(produtoInDatabase)) {
             final var produtoDomainCreate = createProdutoGateway.create(id, produtoDomain);
@@ -39,7 +38,6 @@ public class ProdutoUpsertUseCase {
         final var produtoInDatabase = searchProdutoInDatabase(id);
         Objects.requireNonNull(produtoInDatabase).update(produtoDomainInDatabase);
         log.info("chamou UseCase 2 [{}]", produtoInDatabase.getId());
-        log.info("chamou UseCase 2 [{}]", produtoInDatabase.getIdadeDomain().getIdade());
         return saveProduto(id, produtoInDatabase);
     }
 

@@ -12,7 +12,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-@Slf4j
 public class GetAssetsGatewayImpl implements GetAssetsGateway {
 
     private final AssetsRepository assetsRepository;
