@@ -66,5 +66,7 @@ docker-compose up -d
 * Material de Apoio:
 
   [Descomplicando a Clean Architecture](https://medium.com/luizalabs/descomplicando-a-clean-architecture-cf4dfc4a1ac6)
+
   [Clean Architecture Example with Java and Spring Boot](https://medium.com/swlh/clean-architecture-java-spring-fea51e26e00)
+
   [Descomplicando Clean Architecture NA PRÁTICA](https://www.udemy.com/course/descomplicando-clean-architecture-na-pratica/)
