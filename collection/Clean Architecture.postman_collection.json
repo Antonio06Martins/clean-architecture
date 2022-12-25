@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "1bf482bc-2a99-4e0f-9276-76721dfa3ad2",
+		"name": "Clean Architecture",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/v1/assets/63a78eb16946412fd5cc8ee6",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "identify_id",
+						"value": "0606",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"identify_id\":\"0606\",\r\n    \"car_domain\": {\r\n        \"plate\":\"242424\",\r\n        \"model\":\"GOLL\",\r\n        \"value\":100000.52\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/assets/63a78eb16946412fd5cc8ee6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"assets",
+						"63a78eb16946412fd5cc8ee6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/v1/produto/63a77a803c78e13ef7b6ad9b",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "identify_id",
+						"value": "0606",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\":\"Antonio da Silva Martins\",\r\n    \"idadeDomain\": {\r\n        \"idade\":\"34\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/produto/63a77a803c78e13ef7b6ad9b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"produto",
+						"63a77a803c78e13ef7b6ad9b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/actuator/health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/actuator/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/swagger-ui.html",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/swagger-ui.html",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"swagger-ui.html"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
